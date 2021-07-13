@@ -1,4 +1,4 @@
-﻿using LoginMVC.Models;
+using LoginMVC.Models;
 using LoginMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -41,6 +41,7 @@ namespace LoginMVC.Controllers
         [HttpGet]
         public ActionResult GetUsers()
         {
+            //Service call to get all logged in users
             var users = _service.GetUsers();
              return View("Details",users);
         }
